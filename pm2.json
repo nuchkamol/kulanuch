@@ -1,0 +1,38 @@
+{
+    "apps": [
+      {
+        "name": "kulanuch-node",
+        "exec_mode": "fork",
+        "script": "./app.js",
+        "out_file": "/app/kulanuch-node/kulanuch-node.log",
+        "merge_logs": true,
+        "env": {
+          "NODE_ENV": "production",
+          "HOST": "0.0.0.0",
+          "PORT": 80,
+          "MONGODB_URL": "mongodb://localhost:27017/",
+          "LOGPATH": "/opt/portalwifi/logs/",
+          "PATHFILES":"./views/Kulanuch",
+          "PATHEXCEL":"./data/data.xlsx"
+        },
+        "env_dev": {
+          "NODE_ENV": "development",
+          "HOST": "0.0.0.0",
+          "PORT": 3000,
+          "MONGODB_URL": "mongodb://localhost:27017/",
+          "LOGPATH": "./logs/",
+          "PATHFILES":"./views/Kulanuch",
+          "PATHEXCEL":"./data/data.xlsx"
+        },
+        "env_prod": {
+          "NODE_ENV": "production",
+          "HOST": "0.0.0.0",
+          "PORT": 80,
+          "MONGODB_URL": "mongodb://localhost:27017/",
+          "LOGPATH": "/opt/portalwifi/logs/",
+          "PATHFILES":"./views/Kulanuch",
+          "PATHEXCEL":"./data/data.xlsx"
+        }
+      }
+    ]
+  }
